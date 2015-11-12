@@ -51,7 +51,7 @@ RUN git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.v
 
 COPY ./myvimrc /root/.vimrc
 RUN vim +PluginInstall +qall
-RUN cd /.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
+RUN cd /root/.vim/bundle/YouCompleteMe && ./install.sh --clang-completer
 COPY ./python-template.py /root/python_template.py
 
 
